@@ -1,6 +1,7 @@
 FROM debian:stretch-slim
 
 ENV TOR_USER debian-tor
+ENV TOR_GROUP debian-tor
 ENV TOR_BIN /usr/bin/tor
 ENV TOR_ORIGIN_CONFIG_PATH /etc/tor/torrc
 ENV TOR_CONFIG_DIR /usr/local/etc/tor

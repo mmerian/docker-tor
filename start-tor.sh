@@ -7,4 +7,6 @@ if [ ! -f $TOR_CONFIG_DIR/$TOR_CONFIG_FILE ]; then
     cp $TOR_ORIGIN_CONFIG_PATH $TOR_CONFIG_DIR
 fi
 
+chown -R $TOR_USER:$TOR_GROUP $TOR_DATA_DIR
+
 su -l $TOR_USER -s /bin/bash -c "$TOR_BIN -f $TOR_CONFIG_DIR/$TOR_CONFIG_FILE"
