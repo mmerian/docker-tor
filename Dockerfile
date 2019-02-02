@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 
 ENV TOR_USER debian-tor
 ENV TOR_BIN /usr/bin/tor
-ENV TOR_ORIGIN_CONFIG_PATH = /etc/tor/torrc
+ENV TOR_ORIGIN_CONFIG_PATH /etc/tor/torrc
 ENV TOR_CONFIG_DIR /usr/local/etc/tor
 ENV TOR_DATA_DIR /var/lib/tor
 ENV TOR_CONFIG_FILE torrc
