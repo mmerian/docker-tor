@@ -8,4 +8,4 @@ There are two declared volumes :
 ## Running
 `docker pull mmerian/docker-tor`
 
-`docker run -d -v <local-etc-dir>:/usr/local/etc/tor -v <local-data-dir>:/var/lib/tor mmerian/docker-tor`
+`docker run -d -v /local/etc/dir:/usr/local/etc/tor -v /local/data/dir:/var/lib/tor mmerian/docker-tor`
