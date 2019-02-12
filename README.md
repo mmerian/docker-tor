@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mmerian/docker-tor.svg?branch=master)](https://travis-ci.org/mmerian/docker-tor)
+
 # Docker tor image
 
 ## Volumes
