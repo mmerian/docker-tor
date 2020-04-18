@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 ENV TOR_USER debian-tor
 ENV TOR_GROUP debian-tor
@@ -13,16 +13,16 @@ RUN apt-get update                                   && \
     apt-get install --no-install-recommends -y          \
         ca-certificates apt-transport-https wget gnupg2
 
-RUN echo 'deb https://deb.torproject.org/torproject.org stretch main' >        \
+RUN echo 'deb https://deb.torproject.org/torproject.org buster main' >        \
         /etc/apt/sources.list.d/tor.list                                    && \
-    echo 'deb-src https://deb.torproject.org/torproject.org stretch main' >>   \
+    echo 'deb-src https://deb.torproject.org/torproject.org buster main' >>   \
         /etc/apt/sources.list.d/tor.list
 
 RUN wget -O - https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | apt-key add -
 
 RUN apt-get update                             && \
     apt-get install --no-install-recommends -y    \
-        tor tor-geoipdb                        && \
+        tor tor-geoipdb nyx                    && \
     apt-get clean
 
 RUN mkdir -p $TOR_CONFIG_DIR && \
