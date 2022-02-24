@@ -23,7 +23,7 @@ docker build $DIR -t mmerian/docker-tor:latest $BUILD_OPTIONS
 
 if [ "$TAG_VERSION" == "yes" ]; then
     # Get tor version number, in order to create tag
-    TOR_VER=`docker run mmerian/docker-tor:latest tor --version`
+    TOR_VER=`docker run mmerian/docker-tor:latest tor --version|head -n1`
     TOR_VER=${TOR_VER/'Tor version '/''}
     TOR_VER=${TOR_VER/%./''}
     echo "Tagging version $TOR_VER"
